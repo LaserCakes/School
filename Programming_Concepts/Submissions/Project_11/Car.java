@@ -1,0 +1,36 @@
+//==============================================================================
+// Steven Romeiro
+// Car.java
+//
+// Purpose: Write a class called Car that holds information about an automobile.
+//==============================================================================
+
+public class Car
+{
+	private String make;
+	private String model;
+	private int year;
+	
+	public Car(String newMake, String newModel, int newYear) // Constructor
+	{
+		make = newMake;
+		model = newModel;
+		year = newYear;
+	}
+	
+	public String toString()	// Displays variables as Strings when called
+	{
+		return year + " " + make +
+				" " + model;
+	}
+	
+	public Boolean isAntique() // Calculates if the car is an Antique
+	{
+		if ((2016 - year) > 25)
+		{
+			return true;
+		}
+			
+		return false;
+	}
+}
