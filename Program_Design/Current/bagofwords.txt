@@ -1,0 +1,7 @@
+This : 2
+is : 2
+a : 2
+test : 2
+I : 1
+repeat : 1
+just : 1
