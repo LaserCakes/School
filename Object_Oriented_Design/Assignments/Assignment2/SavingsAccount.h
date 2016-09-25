@@ -11,8 +11,8 @@ class SavingsAccount : public Account
     double interest;
 
   public:
-    SavingsAccount(int initialSavingsBalance, double interestRate)
-    : Account(initialSavingsBalance){};
+    SavingsAccount(double initialSavingsBalance, double interestRate);
     double CalculateInterest();
+    ~SavingsAccount();
 
 };

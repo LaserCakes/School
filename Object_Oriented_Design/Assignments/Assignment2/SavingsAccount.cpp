@@ -9,11 +9,12 @@
 
 using namespace std;
 
-SavingsAccount::SavingsAccount(int initialSavingsBalance, double interestRate)
+SavingsAccount::SavingsAccount(double initialSavingsBalance, double interestRate)
+: Account(initialSavingsBalance)
 {
   if(interestRate > 0)
   {
-    interest = interestRate;
+    interest = interestRate/100;
   }
   else
   {
@@ -22,7 +23,11 @@ SavingsAccount::SavingsAccount(int initialSavingsBalance, double interestRate)
   }
 }
 
-double CalculateInterest()
+double SavingsAccount::CalculateInterest()
 {
-  return(GetBalance() * interest);
+  return (interest * GetBalance());
+}
+
+SavingsAccount::~SavingsAccount()
+{
 }
