@@ -42,6 +42,6 @@ class CheckingAccount : public Account
   public:
     CheckingAccount(double initialBalance, double transactionFee);
     void Credit(double depositAmount);
-    void Debit(double depositAmount); //To be modified later
+    void Debit(double depositAmount);
     ~CheckingAccount();
 };
