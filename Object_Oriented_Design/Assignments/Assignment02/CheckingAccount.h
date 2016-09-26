@@ -5,6 +5,7 @@
 
 #include "Account.h"
 
+//Child class that derives from parent class Account
 class CheckingAccount : public Account
 {
   private:
@@ -13,5 +14,6 @@ class CheckingAccount : public Account
   public:
     CheckingAccount(double initialBalance, double transactionFee);
     void Credit(double depositAmount);
-    void foobar(); //To be modified later
+    void Debit(double depositAmount);
+    ~CheckingAccount();
 };

@@ -9,6 +9,7 @@
 
 using namespace std;
 
+//Sets balance to whatever was input if it's a valid amount.
 Account::Account(double initialBalance)
 {
   if(initialBalance >= 0)
@@ -22,11 +23,13 @@ Account::Account(double initialBalance)
   }
 }
 
+//Adds deposit amount to the initial balance.
 void Account::Credit(double depositAmount)
 {
   balance += depositAmount;
 }
 
+//Subtracts amount entered from the balance as long as result is non-negative.
 bool Account::Debit(double withdrawAmount)
 {
   if(withdrawAmount <= balance)
@@ -36,12 +39,15 @@ bool Account::Debit(double withdrawAmount)
   }
   else
   {
+    //Outputs error message if account is overdrawn.
     cout << "Debit amount exceeds your current balance." << endl;
+    cout << "Overdrawn!" << " Transaction cancelled." << endl;
     return false;
   }
 
 }
 
+//Returns value of private member variable balance.
 double Account::GetBalance()
 {
   return balance;

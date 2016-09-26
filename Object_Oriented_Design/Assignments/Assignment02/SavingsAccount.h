@@ -5,6 +5,7 @@
 
 #include "Account.h"
 
+//Child class that derives from parent class Account
 class SavingsAccount : public Account
 {
   private:
@@ -14,5 +15,4 @@ class SavingsAccount : public Account
     SavingsAccount(double initialSavingsBalance, double interestRate);
     double CalculateInterest();
     ~SavingsAccount();
-
 };
