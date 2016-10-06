@@ -54,7 +54,7 @@ int main()
 
   while(i >= 0)
   {
-    cout << "Please select an account: " << endl;
+    cout << "\nPlease select an account (0 to exit): " << endl;
     cin >> i;
 
     switch(i)
@@ -64,7 +64,7 @@ int main()
       case 3:
       case 4:
       {
-        cout << "How much would you like to deposit?" << endl;
+        cout << "\nHow much would you like to deposit?" << endl;
         cout << "$";
         cin >> depositAmount;
         if (depositAmount < 0)
@@ -81,13 +81,13 @@ int main()
           cout << interestEarned << endl;
         }
         accountVectors[i]->Credit(depositAmount);
-        cout << "How much would you like to withdraw?" << endl;
+        cout << "\nHow much would you like to withdraw?" << endl;
         cout << "$";
         cin >> withdrawAmount;
         while(withdrawAmount <= 0)
         {
           cout << "Invalid amount entered." << endl;
-          cout << "How much would you like to withdraw?" << endl;
+          cout << "\nHow much would you like to withdraw?" << endl;
           cout << "$";
           cin >> withdrawAmount;
         }

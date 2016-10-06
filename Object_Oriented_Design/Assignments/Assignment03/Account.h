@@ -4,11 +4,6 @@
 // COP 3331
 // Account.h
 
-/*Has the compiler defined this header already? When it's included in the
-/ derived classes, this header guard will keep the compiler from redefining
-/ Account.h there. The compiler has originally defined it here, so when a
-/ #include directive is called for Account.h, the header guard sees that the
-/ compiler has already defined it here, and doesn't redefine it. */
 #ifndef ACCOUNT_H
 #define ACCOUNT_H
 
@@ -23,7 +18,7 @@ class Account
     double GetBalance();
     virtual void Credit(double depositAmount);
     virtual bool Debit(double withdrawAmount);
-    virtual double CalculateInterest() = 0;
+    virtual double CalculateInterest();
     virtual ~Account();
 };
 #endif

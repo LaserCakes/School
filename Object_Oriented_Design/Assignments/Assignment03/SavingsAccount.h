@@ -14,5 +14,5 @@ class SavingsAccount : public Account
   public:
     SavingsAccount(double initialSavingsBalance, double interestRate);
     double CalculateInterest();
-    virtual ~SavingsAccount(); //Virtual necessary for destructor?
+    ~SavingsAccount();
 };

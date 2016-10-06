@@ -27,6 +27,9 @@ Account::Account(double initialBalance)
 //Adds deposit amount to the initial balance.
 void Account::Credit(double depositAmount)
 {
+  //Informs the user what memeber function is being called
+  cout << "This is a call to the Base class Account Credit function." << endl;
+
   if(depositAmount >= 0)
   {
     balance += depositAmount;
@@ -40,6 +43,9 @@ void Account::Credit(double depositAmount)
 //Subtracts amount entered from the balance as long as result is non-negative.
 bool Account::Debit(double withdrawAmount)
 {
+  //Informs the user what memeber function is being called
+  cout << "This is a call to the Base class Account Debit function." << endl;
+
   if(withdrawAmount <= balance)
   {
     balance -= withdrawAmount;
@@ -59,6 +65,15 @@ bool Account::Debit(double withdrawAmount)
 double Account::GetBalance()
 {
   return balance;
+}
+
+//Returns zero as functionality is not defined for this class
+double Account::CalculateInterest()
+{
+  cout << "Call to the Base class Account member function." << endl;
+  cout << "This function is not valid for this account and has returned ";
+  cout << "$0 for its value." << endl;
+  return 0;
 }
 
 Account::~Account()

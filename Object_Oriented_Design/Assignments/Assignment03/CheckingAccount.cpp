@@ -29,6 +29,9 @@ Account(initialBalance)
 //Re-defines parent class to charge a fee when the transaction is made.
 void CheckingAccount::Credit(double depositAmount)
 {
+  //Informs the user what memeber function is being called
+  cout << "This is a call to the Derived class Checking Account Credit function." << endl;
+
   if (depositAmount - fee >= 0)
   {
     double newAmount = depositAmount - fee;
@@ -49,6 +52,9 @@ void CheckingAccount::Credit(double depositAmount)
 //Re-defines parent class to charge a fee when transaction is made.
 bool CheckingAccount::Debit(double withdrawAmount)
 {
+  //Informs the user what memeber function is being called
+  cout << "This is a call to the Derived class Checking Account Debit function." << endl;
+
   //Transaction will process if debit amount + fee does not overdraw account.
   if (Account::Debit(withdrawAmount + fee))
   {
@@ -57,12 +63,6 @@ bool CheckingAccount::Debit(double withdrawAmount)
     return true;
   }
   return false;
-}
-
-//Empty implementation of pure virtual function. Function not used in this class.
-double CheckingAccount::CalculateInterest()
-{
-  return 0;
 }
 
 CheckingAccount::~CheckingAccount()

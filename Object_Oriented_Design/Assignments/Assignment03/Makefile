@@ -1,16 +1,16 @@
-all: Program Program2
+all: Program2
 
 Program2:Account.o SavingsAccount.o CheckingAccount.o Program2.o
 		g++ -Wall Account.o SavingsAccount.o CheckingAccount.o Program2.o -o Program2
 
-Program: Account.o SavingsAccount.o CheckingAccount.o Program.o
-		g++ -Wall Account.o SavingsAccount.o CheckingAccount.o Program.o -o Program
+#Program: Account.o SavingsAccount.o CheckingAccount.o Program.o
+#		g++ -Wall Account.o SavingsAccount.o CheckingAccount.o Program.o -o Program
 
 Program2.o: Program2.cpp
 		g++ -Wall -c Program2.cpp
 
-Program.o: Program.cpp
-		g++ -Wall -c Program.cpp
+#Program.o: Program.cpp
+#		g++ -Wall -c Program.cpp
 
 Account.o: Account.cpp Account.h
 		g++ -Wall -c Account.cpp

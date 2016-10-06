@@ -15,6 +15,5 @@ class CheckingAccount : public Account
     CheckingAccount(double initialBalance, double transactionFee);
     void Credit(double depositAmount);
     bool Debit(double withdrawAmount);
-    double CalculateInterest();
-    virtual ~CheckingAccount(); //Virtual necessary for destructor?
+    ~CheckingAccount();
 };
