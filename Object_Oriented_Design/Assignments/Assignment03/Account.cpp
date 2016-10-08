@@ -67,15 +67,7 @@ double Account::GetBalance()
   return balance;
 }
 
-//Returns zero as functionality is not defined for this class
-double Account::CalculateInterest()
-{
-  cout << "Call to the Base class Account member function." << endl;
-  cout << "This function is not valid for this account and has returned ";
-  cout << "$0 for its value." << endl;
-  return 0;
-}
-
+//Virtual destructor to destroy Base class pointers pointed to derived class addresses
 Account::~Account()
 {
 }

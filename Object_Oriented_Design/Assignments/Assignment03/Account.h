@@ -18,7 +18,6 @@ class Account
     double GetBalance();
     virtual void Credit(double depositAmount);
     virtual bool Debit(double withdrawAmount);
-    virtual double CalculateInterest();
     virtual ~Account();
 };
 #endif

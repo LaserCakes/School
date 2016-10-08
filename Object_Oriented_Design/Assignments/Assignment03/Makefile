@@ -1,16 +1,16 @@
-all: Program2
+all: Main
 
-Program2:Account.o SavingsAccount.o CheckingAccount.o Program2.o
-		g++ -Wall Account.o SavingsAccount.o CheckingAccount.o Program2.o -o Program2
+Main: Account.o SavingsAccount.o CheckingAccount.o Main.o
+		g++ -Wall Account.o SavingsAccount.o CheckingAccount.o Main.o -o Main
 
-#Program: Account.o SavingsAccount.o CheckingAccount.o Program.o
-#		g++ -Wall Account.o SavingsAccount.o CheckingAccount.o Program.o -o Program
+#OLD_Main:Account.o SavingsAccount.o CheckingAccount.o OLD_Main.o
+#		g++ -Wall Account.o SavingsAccount.o CheckingAccount.o OLD_Main.o -o OLD_Main
 
-Program2.o: Program2.cpp
-		g++ -Wall -c Program2.cpp
+Main.o: Main.cpp
+		g++ -Wall -c Main.cpp
 
-#Program.o: Program.cpp
-#		g++ -Wall -c Program.cpp
+#OLD_Main.o: OLD_Main.cpp
+#		g++ -Wall -c OLD_Main.cpp
 
 Account.o: Account.cpp Account.h
 		g++ -Wall -c Account.cpp
