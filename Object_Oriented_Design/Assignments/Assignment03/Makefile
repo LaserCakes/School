@@ -22,4 +22,4 @@ CheckingAccount.o: CheckingAccount.cpp CheckingAccount.h
 		g++ -Wall -c CheckingAccount.cpp
 
 clean:
-		rm -rf *o Program
+		rm -rf *o Main
