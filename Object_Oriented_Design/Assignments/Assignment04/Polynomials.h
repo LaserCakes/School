@@ -11,8 +11,10 @@
 class Polynomials
 {
   private:
-    int size, terms;
+    int terms;
+    int static count; //Object counter
     std::vector<int> Polynomial;
+    void counter(); //Count incrementer
 
   public:
     Polynomials();
@@ -20,10 +22,10 @@ class Polynomials
     void Set();
     void Get();
     void Print();
-    Polynomials operator+();
-    Polynomials operator-();
-    Polynomials operator*();
-    Polynomials &operator=(Polynomials &);
+    Polynomials operator+(Polynomials &);
+    Polynomials operator-(Polynomials &);
+    Polynomials operator*(Polynomials &);
+    Polynomials &operator=(Polynomials);
     Polynomials &operator+=(Polynomials &);
     Polynomials &operator-=(Polynomials &);
     Polynomials &operator*=(Polynomials &);
